@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.5869565217391305" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.SetCommandItemController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="485.0">
+         <children>
+            <TableView fx:id="itemListTableView" layoutY="68.0" onMouseClicked="#addItemToCommandByTab" prefHeight="274.0" prefWidth="314.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="68.0">
+              <columns>
+                  <TableColumn fx:id="itemCodeCol" prefWidth="50.0" text="ID" />
+                  <TableColumn fx:id="itemReferenceCol" prefWidth="120.0" text="LIBELLE" />
+                <TableColumn fx:id="itemQuantityCol" prefWidth="75.0" text="QT EN STOCK" />
+                <TableColumn fx:id="itemWholesalePriceCol" prefWidth="75.0" text="PRIX DE GROS" />
+                  <TableColumn fx:id="itemUnitPriceCol" prefWidth="75.0" text="PU" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="searchBar" layoutX="108.0" layoutY="14.0" onKeyReleased="#searchKeyReleased" prefHeight="25.0" prefWidth="206.0" promptText="Rechercher" AnchorPane.rightAnchor="6.0" />
+            <ButtonBar layoutX="60.0" layoutY="354.0" prefHeight="40.0" prefWidth="335.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0">
+               <buttons>
+                  <JFXButton onMouseClicked="#itemDetail" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: #323030;" text="DETAILS" textFill="#fbfafa">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#addItemToCommand" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #323030;" text="AJOUTER A LA COMMANDE" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </buttons>
+            </ButtonBar>
+            <ImageView fitHeight="40.0" fitWidth="48.0" layoutX="11.0" layoutY="12.0" onMouseClicked="#goToCommandPanelView" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/GoBack.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="commandItemTableView" layoutX="36.0" layoutY="69.0" prefHeight="274.0" prefWidth="266.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="69.0">
+              <columns>
+                  <TableColumn fx:id="commandItemRefCol" prefWidth="75.0" text="LIBELLE" />
+                <TableColumn fx:id="commandItemQtCol" prefWidth="75.0" text="QUANTITE" />
+                <TableColumn fx:id="commandItemPriceCol" onEditCommit="#editDiscountValue" prefWidth="75.0" text="PRIX UNITAIRE" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text fill="#323030" layoutX="6.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMANDE" wrappingWidth="104.13671875" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="validCommandButton" layoutX="118.0" layoutY="15.0" onMouseClicked="#validNewCommand" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #323030;" text="VALIDER" textFill="#fbfafa" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </JFXButton>
+            <ButtonBar layoutX="7.0" layoutY="352.0" prefHeight="40.0" prefWidth="341.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="11.0">
+               <buttons>
+                  <JFXButton onMouseClicked="#commandDetailShow" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: #323030;" text="DETAILS" textFill="#fbfafa">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#removeItem" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #323030;" text="ENLEVER" textFill="#fbfafa">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="manageCommandButton" onMouseClicked="#goToSetCommandBill" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: #323030;" text="GERER COM" textFill="#fbfafa">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </buttons>
+            </ButtonBar>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

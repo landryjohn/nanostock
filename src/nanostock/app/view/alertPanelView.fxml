@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.AlertPanelViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="LISTE DES ALERTES">
+         <font>
+            <Font name="Calibri Light" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="alertTableView" layoutX="15.0" layoutY="65.0" prefHeight="264.0" prefWidth="565.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="65.0">
+        <columns>
+          <TableColumn fx:id="alertNumCol" prefWidth="75.0" text="NUMERO D'ALERTE" />
+            <TableColumn fx:id="alertItemRefCol" prefWidth="75.0" text="NOM DE L'ARTICLE" />
+          <TableColumn fx:id="alertMessageCol" prefWidth="75.0" text="MESSAGE D'ALERTE" />
+            <TableColumn fx:id="alertQuantityCol" prefWidth="75.0" text="QUANTITE D'ALERTE" />
+            <TableColumn fx:id="stockQuantityCol" prefWidth="75.0" text="STOCK ACTUEL" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ImageView fitHeight="44.0" fitWidth="57.0" layoutX="25.0" layoutY="342.0" onMouseClicked="#goToHomeView" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="25.0">
+         <image>
+            <Image url="@images/GoBack.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

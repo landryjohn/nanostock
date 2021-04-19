@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@style01.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.InOutStockViewController">
+    <left>
+        <VBox prefHeight="400.0" prefWidth="257.0" styleClass="sideItemBar" stylesheets="@style01.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="44.0" prefWidth="220.0" text="       LENINE CONSTRACTION" textAlignment="CENTER" textFill="#fcf3f3">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <AnchorPane onMouseClicked="#goToItemHomeView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+                    <children>
+                        <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTE DES ARTICLES" wrappingWidth="154.13671875">
+                            <font>
+                                <Font name="Calibri Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/Gold_Bars.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane onMouseClicked="#goToItemAddView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+                    <children>
+                        <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AJOUTER UN  ARTICLES" wrappingWidth="176.13671875">
+                            <font>
+                                <Font name="Calibri Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/Plus_Math.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane onMouseClicked="#goToCategoryManageView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+                    <children>
+                        <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES CATEGORIES" wrappingWidth="198.13671875">
+                            <font>
+                                <Font name="Calibri Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/Create.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            <AnchorPane onMouseClicked="#goToInOutStockView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENTREE/SORTIE EN STOCK" wrappingWidth="198.13671875">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/DataTransfer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane onMouseClicked="#goToInOutStockView" prefHeight="364.0" prefWidth="257.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="63.0" layoutX="14.0" layoutY="295.0" onMouseClicked="#goToHomeView" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/GoBack.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableViewItemStoreList" prefHeight="575.0" prefWidth="843.0">
+                    <columns>
+                        <TableColumn fx:id="itemCodeCol" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="itemReferenceCol" prefWidth="114.0" text="LIBELLE" />
+                        <TableColumn fx:id="quantityCol" prefWidth="90.0" text="QUANTITE" />
+                        <TableColumn fx:id="unitPriceCol" prefWidth="75.0" text="PRIX DE VENTE" />
+                        <TableColumn fx:id="wholesalePriceCol" prefWidth="126.0" text="PRIX DE GROS" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <ButtonBar prefHeight="40.0" prefWidth="102.0" VBox.vgrow="ALWAYS">
+                    <buttons>
+                        <JFXButton onMouseClicked="#addItem" style="-fx-background-color: #FF6600;" text="ENTREE" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#removeItem" style="-fx-background-color: #FF6600;" text="SORTIE" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </buttons>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="10.0" right="20.0" top="10.0" />
+                    </padding>
+                </ButtonBar>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

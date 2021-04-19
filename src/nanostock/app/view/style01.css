@@ -1,0 +1,37 @@
+.parent{
+    -fx-background-color: #fff;
+}
+
+.sidebar{
+    -fx-background-color: #333645;
+}
+
+.menuItem:hover{
+    -fx-background-color: #ff6600 ;
+}
+
+.searchBar:focus{
+    -fx-border-color : #ff6600 ;
+    -fx-border-width: 0px 0px 0px 0px ;
+}
+
+.roundBadge{
+    -fx-background-color: red ;
+    -fx-background-radius: 100% ;
+}
+
+.siderBorderRight{
+    
+}
+
+/* Item section */
+ 
+.sideItemBar{
+    -fx-background-color: #050514 ;
+}
+
+.sideItemBarElement:hover{
+    -fx-background-color: #8c8c8c ;
+}
+
+/*///////////////////////////*/

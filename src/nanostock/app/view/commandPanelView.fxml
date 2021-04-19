@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.CommandPanelViewController">
+   <children>
+      <Label layoutX="99.0" layoutY="14.0" text="LENINE CONSTRUCTION : Liste des commandes" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="commandListTableView" layoutX="11.0" layoutY="71.0" prefHeight="200.0" prefWidth="566.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="commandNumCol" prefWidth="75.0" text="NUMERO COMMANDE" />
+            <TableColumn fx:id="commandDateCol" prefWidth="75.0" text="DATE" />
+            <TableColumn fx:id="commandTimeCol" prefWidth="75.0" text="HEURE" />
+          <TableColumn fx:id="clientNameCol" onEditCommit="#editClientName" prefWidth="75.0" text="NOM DU CLIENT" />
+            <TableColumn fx:id="payStatusCol" prefWidth="75.0" text="STATUT DU PAYEMENT" />
+            <TableColumn fx:id="deliveryStatusCol" prefWidth="75.0" text="STATUT DE LA LIVRAISON" />
+            <TableColumn fx:id="deliveryAddressCol" onEditCommit="#editDeliveryAddress" prefWidth="75.0" text="ADRESSE DE LIVRAISON" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ButtonBar layoutX="386.0" layoutY="346.0" prefHeight="40.0" prefWidth="570.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+        <buttons>
+            <JFXButton onMouseClicked="#deleteCommand" style="-fx-background-color: #FF6600;" text="SUPPRIMER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onMouseClicked="#goToSetCommandBillView" style="-fx-background-color: #FF6600;" text="GERER PAIEMENT" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onMouseClicked="#editCommandItem" style="-fx-background-color: #FF6600;" text="MODIFIER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onMouseClicked="#addCommand" style="-fx-background-color: #FF6600;" text="AJOUTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+        </buttons>
+      </ButtonBar>
+      <TextField fx:id="searchBar" layoutX="425.0" layoutY="39.0" onKeyReleased="#searchKeyReleased" promptText="Recherche" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="36.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="40.0" fitWidth="58.0" layoutX="20.0" layoutY="340.0" onMouseClicked="#goToHomeView" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+         <image>
+            <Image url="@images/Home2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

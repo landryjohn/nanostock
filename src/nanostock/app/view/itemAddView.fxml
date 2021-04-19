@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@style01.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.ItemAddViewController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="257.0" styleClass="sideItemBar" stylesheets="@style01.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="44.0" prefWidth="220.0" text="       LENINE CONSTRACTION" textAlignment="CENTER" textFill="#fcf3f3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane onMouseClicked="#goToItemHomeView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTE DES ARTICLES" wrappingWidth="154.13671875">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Gold_Bars.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane onMouseClicked="#goToItemAddView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AJOUTER UN  ARTICLES" wrappingWidth="176.13671875">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Plus_Math.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane onMouseClicked="#goToCategoryManageView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES CATEGORIES" wrappingWidth="198.13671875">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Create.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="150.0" onMouseClicked="#goToInOutStockView" prefHeight="48.0" prefWidth="193.0" styleClass="sideItemBarElement">
+               <children>
+                  <Text fill="#f8f7f7" layoutX="50.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENTREE/SORTIE EN STOCK" wrappingWidth="198.13671875">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/DataTransfer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane onMouseClicked="#goToInOutStockView" prefHeight="366.0" prefWidth="257.0">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="78.0" layoutX="14.0" layoutY="289.0" onMouseClicked="#goToHomeView" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/GoBack.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="246.0" prefWidth="543.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="stockQuantityField" layoutY="14.0" prefHeight="497.0" prefWidth="545.0">
+               <children>
+                  <JFXTextField fx:id="itemRefField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="49.0" prefHeight="34.0" prefWidth="418.0" promptText="Saisir la reférence de l'article" AnchorPane.rightAnchor="95.0">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="itemDesField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="124.0" prefColumnCount="30" prefHeight="55.0" prefWidth="414.0" promptText="Description sur l'article" AnchorPane.rightAnchor="99.0">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXTextField fx:id="enterPriceField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="229.0" prefHeight="25.0" prefWidth="188.0" promptText="Prix D'entré">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="wholesalePriceField" focusColor="#ff6600" labelFloat="true" layoutX="258.0" layoutY="228.0" prefHeight="25.0" prefWidth="188.0" promptText="Prix de gros">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <Text layoutX="32.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTE DES CATEGORIES">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="categoryChoiceBox" layoutX="228.0" layoutY="302.0" prefHeight="28.0" prefWidth="225.0" />
+                  <JFXTextField fx:id="unitPriceField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="347.0" prefHeight="25.0" prefWidth="188.0" promptText="Prix Unitaire">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="qtField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="417.0" prefHeight="25.0" prefWidth="188.0" promptText="Quantité" text="0">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fx:id="itemImage" fitHeight="159.0" fitWidth="219.0" layoutX="231.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="itemImageName" layoutX="259.0" layoutY="503.0" prefHeight="23.0" prefWidth="186.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="qtAlertField" focusColor="#ff6600" labelFloat="true" layoutX="32.0" layoutY="484.0" prefHeight="25.0" prefWidth="188.0" promptText="Quantité d'alerte" text="0">
+                     <font>
+                        <Font name="Calibri Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="validationButton" buttonType="RAISED" layoutX="31.0" layoutY="540.0" onMouseClicked="#submit" prefHeight="54.0" prefWidth="189.0" style="-fx-background-color: #ff6600;" text="AJOUTER" textFill="#f8f6f6">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="273.0" layoutY="552.0" onMouseClicked="#importItemImage" style="-fx-background-color: #fff;" text="Choisir une image" textFill="#ff6600">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

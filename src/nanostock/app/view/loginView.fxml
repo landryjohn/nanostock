@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.LoginViewController">
+   <children>
+      <Pane layoutX="261.0" layoutY="82.0" prefHeight="437.0" prefWidth="579.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="162.0" layoutX="209.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Male_User.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="userLogin" focusColor="#ff6600" labelFloat="true" layoutX="96.0" layoutY="219.0" prefHeight="25.0" prefWidth="392.0" promptText="Login">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="userPassword" focusColor="#ff6600" labelFloat="true" layoutX="96.0" layoutY="291.0" prefHeight="25.0" prefWidth="392.0" promptText="Mot De Passe">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="177.0" layoutY="359.0" onAction="#login" prefHeight="47.0" prefWidth="204.0" style="-fx-background-color: #ff6600;" text="VALIDER" textFill="#ebeaea">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

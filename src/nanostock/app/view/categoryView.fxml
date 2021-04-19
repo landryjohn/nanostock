@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="107.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="40.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOM DE LA CATEGORY" wrappingWidth="186.13671875">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField focusColor="#ff6600" layoutX="245.0" layoutY="37.0" prefHeight="25.0" prefWidth="322.0" promptText="category Name">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane prefHeight="119.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="40.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIPTION" wrappingWidth="101.13671875">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextArea focusColor="#ff6600" layoutX="241.0" layoutY="1.0" prefHeight="43.0" prefWidth="322.0" promptText="Category Description">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </Pane>
+      <Pane prefHeight="57.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="43.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VALEUR D'ALERTE" wrappingWidth="143.13671875">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField focusColor="#ff6600" layoutX="240.0" layoutY="6.0" prefHeight="34.0" prefWidth="65.0" text="0">
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <ButtonBar prefHeight="99.0" prefWidth="600.0">
+         <buttons>
+            <JFXButton prefHeight="36.0" prefWidth="130.0" style="-fx-background-color: #ff6600;" text="Retour" textFill="#f7f7f7" />
+            <JFXButton prefHeight="36.0" prefWidth="130.0" style="-fx-background-color: #ff6600;" text="Modifier" textFill="#f7f7f7" />
+         </buttons>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets right="100.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</VBox>

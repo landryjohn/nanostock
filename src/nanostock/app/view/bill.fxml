@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="830.0" style="-fx-background-color: #ffffff;" stylesheets="@style02.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nanostock.app.BillController">
+   <children>
+       <AnchorPane fx:id="root" layoutX="6.0" layoutY="14.0" prefHeight="514.0" prefWidth="565.0">
+      <TableView fx:id="billTableView" layoutX="1.0" layoutY="163.0" prefHeight="220.0" prefWidth="581.0" AnchorPane.leftAnchor="1.0">
+         <columns>
+            <TableColumn fx:id="quantityColumn" editable="false" prefWidth="84.0" text="QUANTITE" />
+            <TableColumn fx:id="designationColumn" prefWidth="261.0" text="DESIGNATION" />
+            <TableColumn fx:id="priceItemColumn" prefWidth="111.0" text="PRIX UNITAIRE" />
+            <TableColumn fx:id="priceTotalItemColumn" prefWidth="123.0" text="PRIX TOTAL" />
+         </columns>
+      </TableView>
+      <Text fx:id="billNumberText" layoutX="235.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURE N°" wrappingWidth="98.00000348687172">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="locationDateBillText" layoutX="361.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yaoundé le jj/mm/aaaa" wrappingWidth="111.583984375">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="billPrintedTimeText" layoutX="362.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hh:mm" wrappingWidth="44.583984375">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="sellerManText" layoutX="363.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendeur :" wrappingWidth="215.33789847791195">
+            <font>
+               <Font size="10.0" />
+            </font></Text>
+      <Line endX="434.0" endY="-3.0" layoutX="141.0" layoutY="157.0" startX="-141.0" startY="-3.0" />
+      <Text fx:id="clientNameText" layoutX="363.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client :" wrappingWidth="215.3378940373659">
+            <font>
+               <Font size="10.0" />
+            </font></Text>
+      <Text layoutX="24.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signature du vendeur" wrappingWidth="153.583984375">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="225.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signature du client" wrappingWidth="153.583984375">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label fx:id="billTotalPrice" layoutX="394.0" layoutY="390.0" prefHeight="19.0" prefWidth="164.0" style="-fx-border-color: #000; -fx-alignment: center;" text="000.000.000 FCFA" textAlignment="RIGHT">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Text layoutX="341.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL" wrappingWidth="44.583994879287275">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="deliveryAddressText" layoutX="363.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu de livraison : " wrappingWidth="215.3378940373659">
+            <font>
+               <Font size="10.0" />
+            </font></Text>
+         <AnchorPane layoutY="-1.0" prefHeight="138.0" prefWidth="223.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <Text layoutX="2.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LENINE CONSTRUCTION">
+                  <font>
+                     <Font name="System Bold Italic" size="18.0" />
+                  </font>
+               </Text>
+               <Text layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vente Matériaux de construction Plomberie-Electricité-Menuiserie &amp; divers" wrappingWidth="199.583984375">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Text>
+               <Text layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrée Ebadges Nkoabang face pompe à eaux " wrappingWidth="207.66796931624413">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Text>
+               <Text layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel. (237) 679 10 63 39" wrappingWidth="105.583984375">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Text>
+               <Text layoutX="1.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N° Cont P048400539910D" wrappingWidth="117.583984375">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Text>
+            </children>
+         </AnchorPane>
+         <Label fx:id="billTotalPriceInLetter" layoutX="476.0" layoutY="436.0" prefHeight="25.0" prefWidth="81.0" text="Total en lettre" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="25.0" />
+       </AnchorPane>
+      <ButtonBar layoutX="308.0" layoutY="514.0" prefHeight="40.0" prefWidth="89.0" />
+    <Button fx:id="printButton" layoutX="364.0" layoutY="541.0" mnemonicParsing="false" onMouseClicked="#printBill" text="Imprimer" />
+      <ImageView fx:id="goBackButton" fitHeight="40.0" fitWidth="45.0" layoutX="21.0" layoutY="521.0" onMouseClicked="#goToSetCommandBill" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/GoBack.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
